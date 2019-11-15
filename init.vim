@@ -5,8 +5,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fireplace'
-Plug 'nightsense/snow'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'sainnhe/gruvbox-material'
 Plug 'jiangmiao/auto-pairs'
 Plug 'luochen1990/rainbow'
 Plug 'rking/ag.vim'
@@ -47,7 +46,7 @@ let g:deoplete#enable_at_startup = 1
 
 "====================Intent Guide ====================
 
-let g:indentLine_setColors = 0
+"let g:indentLine_setColors = 0
 
 "==================== Cursor =========================
 set guicursor=a:block-blinkon0
@@ -73,7 +72,17 @@ nnoremap \ :Ag<SPACE>
 "===================== Theme =========================
 " set background=light
 " colorscheme snow
-colorscheme dracula
+" colorscheme dracula
+set termguicolors
+
+"colorscheme gruvbox-material
+
+" for soft background
+" colorscheme gruvbox-material-soft
+
+" for hard background
+"colorscheme gruvbox-material-hard
+
 
 "=====================================================
 "===================== MAPPINGS ======================
@@ -98,6 +107,7 @@ nnoremap <leader>cl :%Eval <Enter>
 nnoremap <leader>ce :Eval <Enter>
 nnoremap <leader>ct :tabnew<CR> " New tab open
 nnoremap <leader>cf :tabn <CR>
+nnoremap <leader>c\ :tabe %<CR>
 map ; :Files<CR>
 
 imap <c-d> <esc>ddi 
